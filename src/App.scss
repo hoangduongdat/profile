@@ -1,0 +1,95 @@
+@use './scss/' as *;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@300;400;500;600;700;800&display=swap');
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tab-highlight-color: transparent;
+}
+
+html {
+  font-size: 100%;
+
+  @include tablet {
+    font-size: 80%
+  }
+
+  @include mobile {
+    font-size: 60%
+  }
+}
+
+body {
+  font-family: $font-family;
+  font-weight: 400;
+  line-height: 1.5;
+
+
+  @include mobile {
+    margin-bottom: 3rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+
+
+button,
+input {
+  outline: 0;
+}
+
+ul{
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.App{
+    padding: 0.5rem 3.5rem;
+    overflow: hidden;
+    color: $black;   
+}
+
+.button {
+    border-radius: $border-radius;
+    border: 1px solid transparent;
+    color: $white;
+    font-size: 1rem;
+    padding: 11px 14px;
+    box-shadow: 0px 20px 24px 3px rgba(251, 161, 40, 0.42);
+    background-image: linear-gradient(to right bottom, $yellow, $main-color);
+    transition: background 0.3s ease;
+
+    &:hover {
+        background: $white;
+        cursor: pointer;
+        color: $main-color;
+        border: 1px solid $main-color;
+    }
+}
+
+.blur {
+    position: absolute;
+    width: 22rem;
+    height: 14rem;
+    border-radius: 50%;
+    background : #e8d3f6;
+    filter: blur(72px);
+    z-index: -98 !important;
+    
+  
+}
+
+
+
+

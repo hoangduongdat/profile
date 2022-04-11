@@ -1,0 +1,62 @@
+@use '../../scss/' as *;
+.card {
+    @include flex(center,unset);
+    flex-direction: column;
+    width: 100%;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    background-color: rgba(255, 255, 255, 0.26);
+    transition: transform 0.4s ease 0s;
+    
+    &:hover {
+        transform: scale(1.05);
+        
+    }
+
+
+    @include tablet {
+       flex: 1;
+       width: 100%;
+    }
+
+    &>* {
+        margin-bottom: 30px;
+    }
+    &__img {
+        width: 100%;
+        @include flex(center,center);
+
+        &> img {
+           min-width: 100px;
+           height: 160px;
+        }
+    }
+
+    &__info {
+        @include flex(center,unset);
+        flex-direction: column;
+        width: 100%;
+        padding: 0 15px;
+        
+        color: $black;
+
+        &>:nth-child(1) {
+            font-size: 1.5rem;
+            font-weight: 600;
+            padding: 0 4px;
+        }
+    }
+
+    &__buttons {
+        width: 100%;
+        padding: 0 2rem;
+        @include flex(center,center);
+        &>* {
+            margin-left: 15px;
+        }
+    }
+
+    &__button {
+        padding:5px 10px;
+    }
+}

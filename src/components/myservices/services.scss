@@ -1,0 +1,90 @@
+@use '../../scss/' as *;
+
+.services {
+    padding: 10rem 0rem;
+    @include flex(center,space-between);
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+
+
+    @include tablet {
+        flex-direction: column;
+        padding: 8rem 0rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+
+    &-left {
+        @include flex(unset,unset);
+        flex-direction: column;
+        margin-right: 20px;
+        width: 100%;
+        text-align: center;
+
+      
+
+        &>*~* {
+            margin-bottom: 40px;
+        }
+
+        &>:nth-child(1) {
+            width: 100%;
+            display: inline-block;
+            font-size: 5rem;
+            font-weight: bold;
+            line-height: 1;
+
+        }
+        &>:nth-child(2) {
+            font-size: 4rem;
+            font-weight: bold;
+            color: $main-color;
+        }
+        &>:nth-child(3) {
+            font-size: 1rem;
+            font-weight: 300;
+            color: gray;
+            font-style: italic;
+        }
+
+    }
+
+    &-right {
+        @include flex(center,center);
+        flex-wrap: wrap;
+        flex:1;
+
+        &__card {
+            width: 300px;
+            margin-left: 30px;
+            margin-bottom: 30px;
+
+            @include mobile {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+    }
+}
+
+.services-button {
+    width: 9rem;
+}
+
+.services-blur2 {
+    right: 10%;
+    top: 10%;
+}
+.services-blur3 {
+    bottom: 10%;
+    left: 10%;
+}
+.services-blur4 {
+    width: 400px;
+    bottom: 20%;
+    left: 11%;
+}

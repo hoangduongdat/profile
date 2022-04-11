@@ -1,0 +1,74 @@
+@use './../../scss/' as *;
+
+
+
+.navbar {
+    height: $header-height;
+    @include flex(center, space-between);
+
+    &-left {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        &__name {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+    }
+
+    &-right {
+        @include flex(center, space-between);
+        flex: 2;
+
+        &__list {
+            flex: 10;
+
+            & > ul {
+                @include flex(center, flex-start);
+
+                & > li~li {
+                    margin-left: 4rem;
+                }
+                & > li {
+                    position: relative;                    
+                    transition: color 0.3s ease;
+                    font-weight: 500;
+                    font-size: 1.3rem ;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        bottom: 0;
+                        height:2px;
+                        width: 0;
+                        background-color: $main-color;
+                        transition: all .4s ease 0s;
+                    }
+
+                    &:hover::after {
+                        width: 100%;
+                    }
+
+                    &:hover a{
+                        color: $main-color;
+                    }
+
+                }
+
+                
+            }
+        }
+    }
+}
+
+.navbar-button {
+    flex:1;
+}
+
+
+
