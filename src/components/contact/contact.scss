@@ -1,0 +1,70 @@
+@use '../../scss/' as *;
+
+.contact {
+    @include flex(unset,space-between);
+    padding: 8rem 10rem;
+    position: relative;
+    flex-direction: row;
+    width: 100%;
+    @include tablet {
+        flex-direction: column;
+
+    }
+
+    &-left {
+        @include flex(center,unset);
+        flex-direction: column;
+        width: 45%;
+        line-height:1.2;
+        font-weight: 600;
+        
+        @include tablet {
+           width: 100%;
+           
+    
+        }
+
+        &>:nth-child(1) {
+            
+            font-size: 5rem;
+        }
+
+        &>:nth-child(2) {
+            font-size: 5rem;
+            color: $main-color;
+        }
+    }
+
+    &-right {
+        @include flex(center, center);
+        flex: 1;
+        margin-top: 4rem;
+      
+
+        &__form {
+            @include flex(center, center);
+            flex-direction: column;
+            width: 350px;
+
+            &>*{
+                margin-bottom: 2.5rem;
+            }
+
+            &-name,&-email, &-message {
+                width: 100%;
+                padding: 8px 50px 8px 5px;
+                border-radius: 5px;
+                border: 2px solid $main-color;
+                outline: none;
+                font-size: 1rem;
+            }
+
+            &-message {
+                height: 4rem;
+            }
+        }
+    }
+}
+.contact-button {
+    width: 8rem;
+}

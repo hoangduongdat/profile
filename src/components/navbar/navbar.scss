@@ -13,7 +13,8 @@
         gap: 2rem;
 
         &__name {
-            font-size: 1.3rem;
+            font-family: 'Akaya Telivigala', cursive;
+            font-size: 2rem;
             font-weight: bold;
         }
 
@@ -28,7 +29,6 @@
 
             & > ul {
                 @include flex(center, flex-start);
-
                 & > li~li {
                     margin-left: 4rem;
                 }
@@ -37,6 +37,7 @@
                     transition: color 0.3s ease;
                     font-weight: 500;
                     font-size: 1.3rem ;
+                    
 
                     &::after {
                         content: "";
@@ -67,7 +68,16 @@
 }
 
 .navbar-button {
-    flex:1;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    z-index: 99;
+    & i {
+    padding: 1rem 1rem;
+    font-size: 3rem;
+    }
 }
 
 

@@ -1,0 +1,40 @@
+@use '../../scss/' as *;
+
+.aboutme {
+    padding: 7rem 8rem 0 8rem;
+    position: relative;
+    z-index: 1;
+    @include tablet {
+    padding: 5rem 3rem 0 3rem;
+    }
+
+    @include mobile {
+        padding: 5rem 0rem 0 0rem;
+        }
+    
+
+    &-header h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        
+    }
+
+    &-content {
+        width: 100%;
+        @include flex(center,space-between);
+        flex-direction: column;
+        
+        
+
+        & span {
+            max-width: 800px;
+            padding: 2rem 2rem;
+            border-radius:$border-radius;
+            box-shadow: $box-shadow;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        
+    }
+}

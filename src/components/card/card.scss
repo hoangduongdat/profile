@@ -1,8 +1,10 @@
 @use '../../scss/' as *;
 .card {
-    @include flex(center,unset);
+    @include flex(center,space-between);
     flex-direction: column;
+
     width: 100%;
+    
     box-shadow: $box-shadow;
     border-radius: $border-radius;
     background-color: rgba(255, 255, 255, 0.26);
@@ -13,10 +15,10 @@
         
     }
 
-
     @include tablet {
        flex: 1;
        width: 100%;
+       margin-bottom: 10px;
     }
 
     &>* {
@@ -37,8 +39,9 @@
         flex-direction: column;
         width: 100%;
         padding: 0 15px;
-        
-        color: $black;
+        text-align: center;
+       
+        color: $txt-color;
 
         &>:nth-child(1) {
             font-size: 1.5rem;
@@ -50,10 +53,7 @@
     &__buttons {
         width: 100%;
         padding: 0 2rem;
-        @include flex(center,center);
-        &>* {
-            margin-left: 15px;
-        }
+        @include flex(center,space-evenly);
     }
 
     &__button {

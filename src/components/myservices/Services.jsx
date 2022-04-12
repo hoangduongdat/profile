@@ -7,19 +7,15 @@ import HeartEmoji from './../../assets/img/heartemoji.png'
 import Humble from './../../assets/img/humble.png'
 import Card from './../card/Card';
 
-import Resume from './resume.pdf'
+
 
 const Services = () => {
     return (
         <div className="services">
             <div className="services-left">
-                <span>My Awesome </span> 
-                <span>Service</span>
-                <span>lorem ispump is the art of the art of the world lorem ispump <br />
-                 lorem  ispump is the art of the world lorem</span>
-                 <a href={Resume} download target="_blank">
-                    <button className="button services-button">Download CV</button>
-                 </a>
+                <h1 className=" to-middle show-on-scroll">My Skills</h1>
+                
+                 
                 <div className="blur services-blur1" style={{background: '#ABF1FF94'}}></div>
              
                <div className="blur services-blur3" style={{background: '#ABF1FF94'}}></div>
@@ -27,26 +23,26 @@ const Services = () => {
 
             </div>
 
-            <div className="services-right">
+            <div className="services-right to-top show-on-scroll">
                <div className="services-right__card">
                     <Card
                             img={HeartEmoji}
                             heading= {'Design'}
-                            deltail={'Figma, Sketch, Photoshop,...'}
+                            deltail={'Figma, Photoshop'}
                     />
                </div>
                <div className="services-right__card">
                     <Card
                             img={Glassesimoji}
-                            heading= {'Developer'}
-                            deltail={'Html, Css, JavaScript, React'}
+                            heading= {'FrontEnd'}
+                            deltail={'Html, Css, JavaScript, ReactJS'}
                     />
                </div>
                <div className="services-right__card">
                     <Card
                             img={Humble}
-                            heading= {'UI/UX'}
-                            deltail={'Figma, Sketch, Photoshop,...'}
+                            heading= {'BackEnd'}
+                            deltail={'NodeJs(Express), c++'}
                     />
                </div>
                <div className="blur services-blur2" ></div>

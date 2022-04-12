@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './intro.scss'
-import { Typewriter , Cursor} from 'react-simple-typewriter'
+import { Typewriter } from 'react-simple-typewriter'
+import Resume from './resume.pdf'
 
 import Github from './../../assets/img/github.png'
 import LinkedIn from './../../assets/img/linkedin.png'
@@ -8,14 +9,15 @@ import Instagram from './../../assets/img/instagram.png'
 
 import Vector1 from './../../assets/img/Vector1.png'
 import Vector2 from './../../assets/img/Vector2.png'
+import { ThemeContext } from './../../context/ThemeContext';
 
 const Intro = () => {
-
+    const themeContext=useContext(ThemeContext);
     return (
         <div className="intro">
             <div className="intro-left">
 
-                <div className="intro-left__name">
+                <div className="intro-left__name to-right show-on-scroll">
                     <span>Hy, I Am </span>
                     <span>
                         <Typewriter
@@ -28,13 +30,13 @@ const Intro = () => {
                         
                     </span>
                 </div>
-                <div className="intro-left__description">
+                <div className="intro-left__description to-left show-on-scroll">
                     <span>Frontend Developer with high level of 
                     experience in web designing and development,
                      producting the Quality word</span>
                 </div>
-                <div className="intro-left__life">
-                    <span>Life is simple </span>
+                <div className="intro-left__life to-right show-on-scroll">
+                    <span className={themeContext.textTheme}>Life is simple </span>
                         <span>
                             <Typewriter
                                 words={['Eat!', 'Sleep!', 'Code!']}
@@ -48,9 +50,11 @@ const Intro = () => {
                        
                     </span>
                 </div>
-                <button className="button intro-button">Hire me</button>   
+                <a href={Resume} download target="_blank" className="to-bottom show-on-scroll">
+                    <button className="button intro-button">Download Resume</button>  
+                </a> 
 
-                <div className="intro-left__icon">
+                <div className="intro-left__icon to-right show-on-scroll">
                     <a href="https://github.com/hoangduongdat" target="_blank"><img src={Github} alt=""/></a>
                     <a href="#"><img src={LinkedIn} alt="" /></a>
                     <a href="#"><img src={Instagram} alt="" /></a>
@@ -58,7 +62,7 @@ const Intro = () => {
                 
             </div>
                 
-            <div className="intro-right">
+            <div className="intro-right to-top show-on-scroll">
                 <img className="intro-right__vector" src={Vector1} alt="" />
                 <img className="intro-right__vector" src={Vector2} alt="" />
                 <div className="intro-right__image">

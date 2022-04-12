@@ -2,6 +2,8 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+
 
 
 *{
@@ -28,7 +30,6 @@ body {
   font-weight: 400;
   line-height: 1.5;
 
-
   @include mobile {
     margin-bottom: 3rem;
   }
@@ -36,7 +37,6 @@ body {
 
 a {
   text-decoration: none;
-  color: unset;
 }
 
 
@@ -65,7 +65,7 @@ img {
     border: 1px solid transparent;
     color: $white;
     font-size: 1rem;
-    padding: 11px 14px;
+    padding: 10px 14px;
     box-shadow: 0px 20px 24px 3px rgba(251, 161, 40, 0.42);
     background-image: linear-gradient(to right bottom, $yellow, $main-color);
     transition: background 0.3s ease;
@@ -90,6 +90,72 @@ img {
   
 }
 
+
+.to-right {
+  transform: translateX(-200px);
+}
+
+.to-left {
+  transform: translateX(200px);
+}
+.to-top {
+  transform: translateY(100px);
+}
+.to-bottom {
+  transform: translateY(-60px);
+}
+
+.to-middle {
+  font-size: 0 ;
+}
+
+
+.to-right,
+.to-left,
+.to-top,
+.to-bottom,
+.to-middle{
+  opacity: 0;
+  transition: all 1.5s ease 0s;
+}
+
+.to-right.show,
+.to-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+.to-top.show,.to-bottom.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.to-middle.show {
+  opacity: 1;
+  font-size: 5rem !important;
+}
+
+
+.lightTheme {
+  background-color: $white;
+  color: $black;
+  $txt-color:#242D49;
+  
+}
+
+.darkTheme {
+  background-color: $black;
+  color: #fff !important;
+  $txt-color:#FFF !important;
+}
+
+.darkText {
+  color: #fff !important;
+}
+.lightText {
+  color: #000 !important;
+}
 
 
 
