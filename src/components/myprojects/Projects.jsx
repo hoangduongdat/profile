@@ -76,7 +76,7 @@ const Projects = () => {
                 <Card
                      img={Bicycle}
                      heading={'Bicycle Shop'}
-                     deltail={'A demo landing page for Ecommerce Website using HTML CSS & JavaScript '}
+                     deltail={'A landing page for Ecommerce Website using HTML CSS & JavaScript '}
                      viewSource={{
                              displayName: 'View Source',
                              link: 'https://github.com/hoangduongdat/shop-bicycle'
@@ -106,7 +106,7 @@ const Projects = () => {
                 <Card
                      img={ClockImage}
                      heading={'Time Oclock'}
-                     deltail={'A demo landing page for Time Oclock using HTML CSS & JavaScript'}
+                     deltail={'A landing page for Time Oclock using HTML CSS & JavaScript'}
                      viewSource={{
                              displayName: 'View Source',
                              link: 'https://github.com/hoangduongdat'

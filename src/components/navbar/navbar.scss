@@ -6,6 +6,7 @@
     @include flex(center, space-between);
     position: relative;
     width: 100%;
+    
     @include tablet {
         position: fixed;
         background : fff;
@@ -53,45 +54,9 @@
     &-right {
         @include flex(center, space-between);
         flex: 2;
-        @include tablet {
-           position: fixed;
-           top: $header-height;
-           background-color: #fff;
-           width: 100%;
-           height: 100vh;
-           z-index: 999;
-           padding:0;
-           @include flex(unset, unset);
-           overflow: hidden;
-           display: none;
-
-           &.active {
-               display: block;
-           }
-           &>ul {
-               flex-direction: column;
-               width: 100%;
-
-               &>li {          
-                   width: 100%; 
-                   &:hover {
-                       background-color: rgb(227, 225, 225);
-                   }
-                   &:hover::after{
-                       width: 0;
-                   }   
-                   &>a {
-                       font-size: 2rem;
-                        display: inline-block;
-                        padding: 3rem 4rem;
-                       width: 100%;
-                       color: $txt-color !important;
-                   }
-               }
-            }
-        }
             & > ul {
                 @include flex(center, flex-start);
+                width: 100%;
                 & > li~li {
                     margin-left: 4rem;
                     @include tablet {
@@ -125,6 +90,47 @@
                     }
                 } 
             }
+
+
+////////////////////////////////////////////////////    
+        @include tablet {
+            position: fixed;
+            top: $header-height;
+            background-color: #fff;
+            width: 100%;
+            height: 100vh;
+            z-index: 999;
+            padding:0;
+            @include flex(unset, unset);
+            overflow: hidden;
+            display: none;
+ 
+            &.active {
+                display: block;
+            }
+            &>ul {
+                flex-direction: column;
+                width: 100%;
+ 
+                &>li {          
+                    width: 100%; 
+                    &:hover {
+                        background-color: rgb(227, 225, 225);
+                    }
+                    &:hover::after{
+                        width: 0;
+                    }   
+                    &>a {
+                        font-size: 2rem;
+                         display: inline-block;
+                         padding: 3rem 4rem;
+                        width: 100%;
+                        color: $txt-color !important;
+                    }
+                }
+             }
+         }
+         ////////////////////////////////////////////////////////
     }
 }
 
