@@ -2,11 +2,10 @@ import React from 'react';
 import './aboutme.scss'
 const AboutMe = () => {
     return (
-        <div className="aboutme">
+        <div className="aboutme" id="about">
             <div className="aboutme-header to-right show-on-scroll">
                 <h1>A little bit about me</h1>
-                <div className="blur" style={{top: '0',left: '30%'}}></div>
-                <div className="blur" style={{top: '0%',left: '50%' ,background: '#ABF1FF94'}}></div>
+              
             </div>
             <div className="aboutme-content">
                 <span className="to-top show-on-scroll">

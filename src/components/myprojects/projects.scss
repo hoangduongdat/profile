@@ -2,15 +2,16 @@
 
 .projects {
 
-    
+    padding : 8rem 3rem 2rem 3rem;
     position: relative;
 
     &-header {
         font-family: 'Akaya Telivigala', cursive;
         width: 100%;
         text-align: center;
-        padding-bottom:  4rem;
+        padding-bottom:  5rem;
         font-size: 3rem;
+        position: relative;
     }
 
     &-cards {
@@ -19,6 +20,7 @@
         padding: 0 10rem;
         grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
         gap: 30px;
+        position: relative;
 
         @include tablet {
             grid-template-columns: repeat(auto-fill,minmax(250px,1fr));

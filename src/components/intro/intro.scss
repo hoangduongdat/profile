@@ -3,15 +3,19 @@
 .intro {
     @include flex(unset,space-between);
     position: relative;
-    
+    padding : 0 3rem;
     height: 77vh;
     margin-top: 6rem;
     flex-direction: row;
     @include mobile {
         @include flex(unset,unset);
         flex-direction: column;
+        padding : 4rem 3rem;
         height: auto;
 
+    }
+    @include tablet {
+        padding : 5rem 3rem;
     }
 
     &-left {
@@ -53,7 +57,7 @@
             font-size: 2rem;     
             &>:nth-child(1)
             {
-                color: $txt-color;  
+                color: $txt-color; 
             }
             &>:nth-child(2)
             {
@@ -68,6 +72,10 @@
             & >* {
                 transform: scale(0.5);
                 cursor: pointer;
+                transition: transform 0.4s ease;
+                &:hover {
+                    transform: translateY(-8px) scale(0.5); 
+                }
             }
         }
     }

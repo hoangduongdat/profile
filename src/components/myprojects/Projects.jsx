@@ -14,10 +14,11 @@ import Card from './../card/Card';
 
 const Projects = () => {
     return (
-        <div className="projects">
+        <div className="projects" id="projects">
+                <div className="blur" style={{top: '0',left: '30%',zIndex: 1}}></div>
             <div className="projects-header">
                 <h1 className=" to-middle show-on-scroll">My Projects</h1>
-                <div className="blur" style={{top: '0',left: '30%'}}></div>
+                
                 <div className="blur" style={{top: '0%',left: '50%' ,background: '#ABF1FF94'}}></div>
             </div>
         

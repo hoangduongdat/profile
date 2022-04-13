@@ -11,15 +11,15 @@ import Card from './../card/Card';
 
 const Services = () => {
     return (
-        <div className="services">
+        <div className="services" id="portfolio">
             <div className="services-left">
                 <h1 className=" to-middle show-on-scroll">My Skills</h1>
                 
                  
-                <div className="blur services-blur1" style={{background: '#ABF1FF94'}}></div>
+                <div className="blur services-blur1" style={{background: '#ABF1FF94', top: '50%', left: '0%'}}></div>
              
-               <div className="blur services-blur3" style={{background: '#ABF1FF94'}}></div>
-               <div className="blur services-blur4" ></div>
+               <div className="blur services-blur3" style={{background: '#ABF1FF94', top: '0', left: '50%'}}></div>
+               <div className="blur services-blur4"style={{ top: '0', left: '30%'}} ></div>
 
             </div>
 

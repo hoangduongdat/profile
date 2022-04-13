@@ -18,7 +18,7 @@ const Contact = () => {
     };
 
     return (
-        <div className="contact">
+        <div className="contact" id="contact">
             <div className="contact-left to-left show-on-scroll">
                 <span>Get in touch</span>
                 <span>Contact me</span>

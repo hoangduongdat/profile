@@ -14,11 +14,11 @@ import { ThemeContext } from './../../context/ThemeContext';
 const Intro = () => {
     const themeContext=useContext(ThemeContext);
     return (
-        <div className="intro">
+        <div className="intro"  id="intro">
             <div className="intro-left">
 
                 <div className="intro-left__name to-right show-on-scroll">
-                    <span>Hy, I Am </span>
+                    <span className={themeContext.textTheme}>Hy, I Am </span>
                     <span>
                         <Typewriter
                             words={['Hoang Duong Đat']}
