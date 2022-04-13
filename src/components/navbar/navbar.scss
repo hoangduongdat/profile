@@ -1,7 +1,6 @@
 @use './../../scss/' as *;
 
 
-
 .navbar {
     height: $header-height;
     @include flex(center, space-between);
@@ -13,8 +12,6 @@
         z-index: 999;
         color: $txt-color !important;
     }
-
-
     &-left {
         flex: 1;
         @include flex(center, space-between);
@@ -71,26 +68,18 @@
            &.active {
                display: block;
            }
-        
-           
            &>ul {
                flex-direction: column;
                width: 100%;
 
-               &>li {
-                   
-                   width: 100%;
-                   
-                  
-              
+               &>li {          
+                   width: 100%; 
                    &:hover {
                        background-color: rgb(227, 225, 225);
                    }
                    &:hover::after{
                        width: 0;
-                   }
-
-                   
+                   }   
                    &>a {
                        font-size: 2rem;
                         display: inline-block;
@@ -100,8 +89,6 @@
                    }
                }
             }
-           
-           
         }
             & > ul {
                 @include flex(center, flex-start);
@@ -117,8 +104,6 @@
                     transition: color 0.3s ease;
                     font-weight: 500;
                     font-size: 1.3rem ;
-                    
-
                     &::after {
                         content: "";
                         position: absolute;
@@ -138,32 +123,53 @@
                     &:hover a{
                         color: $main-color;
                     }
-
-                }
-
-                
+                } 
             }
-        
     }
 }
 
 .navbar-button {
     position: fixed;
-    top: 70px;
+    bottom: 105px;
     right: 30px;
-    background-color: transparent;
+    background-color: $main-color;
     box-shadow: $box-shadow;
     border-radius: 50%;
     border: none;
-    z-index: 99;
-    transition: background-color .3s ease;
+    z-index: 9999;
+    transition: transform .3s ease;
     & i {
     padding: 1rem 1rem;
     font-size: 2.5rem;
     }
     &:hover {
-        background-color: $main-color;
+        transform: scale(.9);
     }
+    @include mobile{
+        bottom: 70px;
+    }
+}
+
+.navbar-scroll {
+    position: fixed;
+    bottom: 20px;
+    right:30px;
+    border-radius: 50%;
+    background-color: $main-color;
+    border: none;
+    z-index: 9999;
+    box-shadow: $box-shadow;
+    transition: transform .3s ease;
+
+    &:hover {
+        transform: scale(.9);
+    }
+    
+    &>i {
+        padding: 1rem 1rem;
+        font-size: 2.5rem;
+    }
+       
 }
 
 

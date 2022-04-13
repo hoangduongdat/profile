@@ -4,7 +4,8 @@ import './navbar.scss'
 
 const NavBar = () => {
     const themeContext=useContext(ThemeContext);
-    const [active,setActive] = useState(true)
+    const [active,setActive] = useState(false)
+    const [showGoToTop,setShowGoToTop] = useState(false)
 
     const handleTheme = ()=>{
         themeContext.toggleTheme()
@@ -14,6 +15,22 @@ const NavBar = () => {
     const handleToggleMenu =() =>{
         setActive(active=>!active);
     }
+
+
+    const handleClickToTop= () =>{
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0; 
+
+    }
+  
+
+    useEffect(() =>{
+        const handleScroll=()=>{      
+            setShowGoToTop((window.scrollY >= 200));
+        }
+
+        window.addEventListener('scroll', handleScroll)
+    })
   
     const content_el = useRef(null);
     const toggle_el = useRef(null);
@@ -39,7 +56,7 @@ const NavBar = () => {
                     Hoang Dat
                 </div>
                 <button ref={toggle_el} className={` navbar-left__menu`} onClick={handleToggleMenu}>
-                    <i class='bx bx-menu'></i>
+                    <i className='bx bx-menu'></i>
                 </button>
             </div>
             <div className={`navbar-right ${active && 'active'}`} ref={content_el}>
@@ -56,9 +73,18 @@ const NavBar = () => {
                 onClick={handleTheme}
                 style={{color: themeContext.theme==='lightTheme' ? '#242D49' : '#fff' }}
                 >
-               
-                    <i class="bx bx-palette"></i>
+                    <i className="bx bx-palette"></i>
             </button>
+            {showGoToTop &&(
+                <button 
+                className="navbar-scroll" 
+                onClick={handleClickToTop}
+                style={{color: themeContext.theme==='lightTheme' ? '#242D49' : '#fff' }}
+                >
+                    <i className='bx bx-up-arrow-circle'></i>
+            </button>
+            )}
+            
         </div>
     );
 };

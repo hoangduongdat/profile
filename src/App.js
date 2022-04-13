@@ -14,7 +14,7 @@ import {ThemeContext} from './context/ThemeContext'
 
 function App() {
   const themeContext=useContext(ThemeContext);
-  console.log(themeContext)
+ 
 
   useEffect(() => {
       let el_to_show = document.querySelectorAll('.show-on-scroll')
@@ -31,7 +31,7 @@ function App() {
             }
         })
       }
-      if(window.scrollY==0){
+      if(window.scrollY===0){
         loop()
       } 
       window.addEventListener('scroll',loop)
@@ -39,8 +39,7 @@ function App() {
   })
 
   return (
-  
-      <div className={`App ${themeContext.theme}`} >
+    <div className={`App ${themeContext.theme}`} >
       <NavBar/>
       <Intro/>
       <AboutMe/>
@@ -49,8 +48,6 @@ function App() {
       <Contact/>
       <Footer/>
     </div>
-   
-    
   );
 }
 

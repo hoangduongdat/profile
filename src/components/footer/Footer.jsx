@@ -13,10 +13,10 @@ const Footer = () => {
             </div>
 
             <ul className="footer-social__icon">
-                <li><a href=""><i class='bx bxl-facebook-circle'></i></a></li>
-                <li><a href=""><i class='bx bxl-twitter' ></i></a></li>
-                <li><a href=""><i class='bx bxl-linkedin-square' ></i></a></li>
-                <li><a href=""><i class='bx bxl-instagram' ></i></a></li>
+                <li><a href=""><i className='bx bxl-facebook-circle'></i></a></li>
+                <li><a href=""><i className='bx bxl-twitter' ></i></a></li>
+                <li><a href=""><i className='bx bxl-linkedin-square' ></i></a></li>
+                <li><a href=""><i className='bx bxl-instagram' ></i></a></li>
             </ul>
             <ul className="footer-social__menu">
                 <li ><a href="#intro">Home</a> </li>

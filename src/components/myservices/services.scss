@@ -1,17 +1,17 @@
 @use '../../scss/' as *;
 
 .services {
-    padding: 8rem 0rem 0 0;
+    
     @include flex(center,space-between);
     flex-direction: column;
     position: relative;
     width: 100%;
-    padding : 6rem 3rem;
+    padding : 5rem 3rem 0 3rem;
 
 
     @include tablet {
         flex-direction: column;
-        padding: 8rem 3rem 0 3rem;
+        padding: 6rem 3rem 0 3rem;
         justify-content: center;
         align-items: center;
         text-align: center;

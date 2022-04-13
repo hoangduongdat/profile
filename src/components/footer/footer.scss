@@ -56,25 +56,25 @@
     }
 
     & #wave1 {
-        z-index: 1000;
+        z-index: 77;
         opacity: 1;
         bottom: 0;
         animation: animateWave 4s linear infinite;
     }
     & #wave2 {
-        z-index: 999;
+        z-index: 88;
         opacity: 0.5;
         bottom: 10px;
         animation: animateWave_2 4s linear infinite;
     }
     & #wave3 {
-        z-index: 1000;
+        z-index: 100;
         opacity: 0.2;
         bottom: 15px;
         animation: animateWave 3s linear infinite;
     }
     & #wave4 {
-        z-index: 999;
+        z-index: 99;
         opacity: 0.7;
         bottom: 20px;
         animation: animateWave_2 3s linear infinite;

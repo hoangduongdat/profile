@@ -30,10 +30,8 @@ const Intro = () => {
                         
                     </span>
                 </div>
-                <div className="intro-left__description to-left show-on-scroll">
-                    <span>Frontend Developer with high level of 
-                    experience in web designing and development,
-                     producting the Quality word</span>
+                <div className="intro-left__description to-left show-on-scroll">  
+                    <span>Frontend Developer with intern level in web designing and development ^^</span>
                 </div>
                 <div className="intro-left__life to-right show-on-scroll">
                     <span className={themeContext.textTheme}>Life is simple </span>
